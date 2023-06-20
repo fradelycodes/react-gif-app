@@ -11,14 +11,18 @@ export const GiftExpertApp = () => {
 
   return (
     <>
-      <h1>React App For Gifs</h1>
-      <p>This is a react app that is currently consuming an API from Gyphy</p>
+      <div className="main">
+        <h1 className="heading">REACT APP FOR GIFS</h1>
+        <p className="subHeading">
+          This is a React App consuming an API from GYPHY
+        </p>
 
-      <AddCategory onNewCategory={(value) => onAddCategory(value)} />
+        <AddCategory onNewCategory={(value) => onAddCategory(value)} />
 
-      {categories.map((category) => (
-        <GifGrid key={category} category={category} />
-      ))}
+        {categories.map((category) => (
+          <GifGrid key={category} category={category} />
+        ))}
+      </div>
     </>
   );
 };
